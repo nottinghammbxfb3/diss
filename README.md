@@ -68,6 +68,10 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 - Extract BLAST results script: [get_blast_results.py](get_blast_results.py)
 - Extract BLAST hit NCBI codes: [make_hits_file.py](make_hits_file.py)
 - Extract BLAST hit sequences: [get_hits_seqs.py](get_hits_seqs.py)
+- Some genes had multiple proteins appear in the BLAST result, these were manually filtered to include 1 protein per gene by selecting the longest protein for each gene.
+- This was done by searching the protein codes in the given species .gff annotation file, and checking the 'GeneID' was unique relative to the other hits for that species.
+- Out of 74 proteins, 63 were unique and included in downstream analysis.
+- The pre-filtered amino acid sequences, with * indicating uniqueness and inclusion downstream: [all_hit_seqs.faa](all_hit_seqs.faa)
 
 __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus. ([combined_blast_results.csv](combined_blast_results.csv))
 |Species|Query sequence|Database sequence|Percent identity|Alignment length|Number of mismatches|Number of gap openings|Start of alignment in query|End of alignment in query|Start of alignment in subject|End of alignment in subject|Expectation value     |Bit score|
