@@ -10,7 +10,7 @@
 ### B. BUSCO genome quality control
 - BUSCO version 5.4.7
 - Lineage used: eukaryota_odb10
-- Example script:[Busco example script](busco_example.sh)
+- Example script:[Busco_example.sh](busco_example.sh)
 
 
 
