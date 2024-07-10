@@ -57,4 +57,4 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 
 ### C. BLAST search
 - BLAST version 2.14.1 (Custom version for HPC: blast-uoneasy/2.14.1-gompi-2023a)
-- BLAST database example script: [make_blastdb.sh](makeblastdb.sh)
+- BLAST database example script: [make_blastdb.sh](make_blastdb.sh)
