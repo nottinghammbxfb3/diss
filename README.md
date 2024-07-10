@@ -2,14 +2,19 @@
 ## 1. Dataset construction
 ### A. Genome download
 - NCBI Datasets version 16.13.0
-- To download a dataset (Homo sapiens)
-- datasets download genome accession GCF_000001405.40 --include gff3,rna,cds,protein,genome,seq-report
+- NCBI Datasets accession sourced from NCBI Datasets genome website: https://www.ncbi.nlm.nih.gov/datasets/genome/
+- Example command ran in command line to download a genome (Homo sapiens):
+  ```
+  datasets download genome accession GCF_000001405.40 --include gff3,rna,cds,protein,genome,seq-report
+  ```
 ### B. BUSCO genome quality control
 - BUSCO version 5.4.7
-- busco -i genomes/ -m genome -l eukaryota_odb10 -o busco_animal -c 50
+- Lineage used: eukaryota_odb10
+- Example script: busco_example.sh
 
 
-__Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession number. * indicates using a clade instead of kingdom.__
+
+__Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession number.__ * indicates using a clade instead of kingdom.
 |Genus|Species|Kingdom|Phylum|Class|Order|Family|Busco Missing (%)|NCBI Accession|
 |-|-|-|-|-|-|-|-|-|
 |Homo|sapiens|Animal|Chordata|Mammalia|Primates|Hominidae|0|GCF_000001405.40|
