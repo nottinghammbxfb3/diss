@@ -52,3 +52,9 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 |Dictyostelium|discoideum AX4|Amoebozoa*|Evosea|Eumycetozoa| Dictyosteliales|Dictyosteliaceae|4.3|GCF_000004695.1|
 |Giardia|intestinalis|Metamonada*|Fornicata|N/A|Diplomonadida|Hexamitidae|70.2|GCF_000002435.2|
 |Leishmania|major strain Friedlin|Discoba*|Euglenozoa|Kinetoplastea| Trypanosomatida|Trypanosomatidae|36.9|GCF_000002725.2|
+
+
+
+### C. BLAST search
+- BLAST version 2.14.1 (Custom version for HPC: blast-uoneasy/2.14.1-gompi-2023a)
+- BLAST database example script: 
