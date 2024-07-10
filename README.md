@@ -56,7 +56,9 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 
 
 ### C. BLAST search
+- BLASTp with Homo sapiens eL22 amino acid sequence as the query, was ran on custom database with evalue threshold of 1e-7.
+- All species amino acid genomes stored in a single directory, named by species.
 - BLAST version 2.14.1 (Custom version for HPC: blast-uoneasy/2.14.1-gompi-2023a)
-- Create BLAST database example script: [make_blastdb.sh](make_blastdb.sh)
-- Homo sapiens eL22 amino acid sequence to run BLAST with: [hs_el22.faa](hs_el22.faa)
-- Run BLAST of Homo Sapien eL22 on custom database (1e-7): [run_blast_aa.sh[(run_blast_aa.sh)
+- Create BLAST custom database script: [make_blastdb.sh](make_blastdb.sh)
+- Homo sapiens eL22 amino acid query sequence: [hs_el22.faa](hs_el22.faa)
+- Run BLASTp on custom database script: [run_blast_aa.sh](run_blast_aa.sh)
