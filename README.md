@@ -57,4 +57,6 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 
 ### C. BLAST search
 - BLAST version 2.14.1 (Custom version for HPC: blast-uoneasy/2.14.1-gompi-2023a)
-- BLAST database example script: [make_blastdb.sh](make_blastdb.sh)
+- Create BLAST database example script: [make_blastdb.sh](make_blastdb.sh)
+- Homo sapiens eL22 amino acid sequence to run BLAST with: [hs_el22.faa](hs_el22.faa)
+- Run BLAST of Homo Sapien eL22 on custom database (1e-7): [run_blast_aa.sh[(run_blast_aa.sh)
