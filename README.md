@@ -1,4 +1,7 @@
 # Supplementary material
+## Tools used throughout:
+- Python version 3.12.2
+- Pandas version 2.2.2
 ## 1. Dataset construction
 ### A. Genome download
 - NCBI Datasets version 16.13.0
@@ -57,12 +60,13 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 
 ### C. BLAST search
 - BLASTp with Homo sapiens eL22 amino acid sequence as the query, was ran on custom database with evalue threshold of 1e-7.
-- All species amino acid genomes stored in a single directory, named by species.
+- All species amino acid genomes stored in a single directory, named by first 3 letters of genus.
 - BLAST version 2.14.1 (Custom version for HPC: blast-uoneasy/2.14.1-gompi-2023a)
 - Create BLAST custom database script: [make_blastdb.sh](make_blastdb.sh)
 - Homo sapiens eL22 amino acid query sequence: [hs_el22.faa](hs_el22.faa)
 - Run BLASTp on custom database script: [run_blast_aa.sh](run_blast_aa.sh)
 - Extract BLAST results script: [get_blast_results.py](get_blast_results.py)
+- Extract BLAST hit sequences:
 
 __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus. ([combined_blast_results.csv](combined_blast_results.csv))
 |Species|Query sequence|Database sequence|Percent identity|Alignment length|Number of mismatches|Number of gap openings|Start of alignment in query|End of alignment in query|Start of alignment in subject|End of alignment in subject|Expectation value     |Bit score|
