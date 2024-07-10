@@ -66,7 +66,8 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 - Homo sapiens eL22 amino acid query sequence: [hs_el22.faa](hs_el22.faa)
 - Run BLASTp on custom database script: [run_blast_aa.sh](run_blast_aa.sh)
 - Extract BLAST results script: [get_blast_results.py](get_blast_results.py)
-- Extract BLAST hit sequences:
+- Extract BLAST hit NCBI codes: [make_hits_file.py](make_hits_file.py)
+- Extract BLAST hit sequences: [get_hits_seqs.py](get_hits_seqs.py)
 
 __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus. ([combined_blast_results.csv](combined_blast_results.csv))
 |Species|Query sequence|Database sequence|Percent identity|Alignment length|Number of mismatches|Number of gap openings|Start of alignment in query|End of alignment in query|Start of alignment in subject|End of alignment in subject|Expectation value     |Bit score|
