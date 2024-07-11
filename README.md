@@ -154,6 +154,7 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 ## 2. Phylogenetic reconstruction of eL22 family.
 ### A. Multiple sequence alignment (MSA)
 - MAFFT version 7.511
+- Using web tool: https://mafft.cbrc.jp/alignment/server/index.html 
 - Strategy: Auto (which selected L-INS-I)
 - Alignment file: [aa_msa.aln](aa_msa.aln)
 
@@ -161,3 +162,12 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Trimal version 1.4.1
 - Model used: gappyout
 - Trimmed alignment file: [trim_aa_msa.aln](trim_aa_msa.aln)
+- Command ran in command line:
+  ```
+  trimal -in aa_msa.aln -out trim_aa_msa.aln -gappyout
+  ```
+### C. IQTREE maximum likelihood phylogenetic reconstruction:
+- IQTREE version 2.1.4-beta COVID-edition built Jun 24 2021
+- Run IQTREE with ModelFinder Plus and 1000 bootstrap replicates: [run_iqtree.sh](run_iqtree.sh)
+- Model selected by ModelFinder Plus: Q.yeast+G4
+- Gene tree created by IQTREE: [gene_tree.tree](gene_tree.tree)
