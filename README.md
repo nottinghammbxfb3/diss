@@ -151,3 +151,13 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 |ara    |NP_000974.1   |NP_198129.1      |66.667          |99              |30                  |2                     |19                         |115                      |16                           |113                        |7.04e-30              |104.0    |
 |ara    |NP_000974.1   |NP_171782.1      |56.154          |130             |52                  |4                     |1                          |128                      |1                            |127                        |1.78e-28              |101.0    |
 
+## 2. Phylogenetic reconstruction of eL22 family.
+### A. Multiple sequence alignment (MSA)
+- MAFFT version 7.511
+- Strategy: Auto (which selected L-INS-I)
+- Alignment file: [aa_msa.aln](aa_msa.aln)
+
+### B. Trimming MSA
+- Trimal version 1.4.1
+- Model used: gappyout
+- Trimmed alignment file: [trim_aa_msa.aln](trim_aa_msa.aln)
