@@ -170,4 +170,4 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - IQTREE version 2.1.4-beta COVID-edition built Jun 24 2021
 - Run IQTREE with ModelFinder Plus and 1000 bootstrap replicates: [run_iqtree.sh](run_iqtree.sh)
 - Model selected by ModelFinder Plus: Q.yeast+G4
-- Gene tree created by IQTREE: [gene_tree.tree](gene_tree.tree)
+- IQTREE output file, including model selection and consensus tree: [iqtree_out.iqtree](iqtree_out.iqtree)
