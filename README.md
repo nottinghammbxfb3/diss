@@ -2,7 +2,8 @@
 ## Tools used throughout:
 - Python version 3.12.2
 - Pandas version 2.2.2
-- conda version 24.3.0
+- Conda version 24.3.0
+- Slurm version 23.02.6
 ## 1. Dataset construction
 ### A. Genome download
 - NCBI Datasets version 16.13.0
