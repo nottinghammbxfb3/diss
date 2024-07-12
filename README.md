@@ -197,6 +197,7 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Settings:
   - To account for duplications and losses: --rec-model UndatedDL
   - To evaluate the likelihood, the duplication and loss rates, and the reconciliation of the starting gene tree: --strategy EVAL
+  - Optimal substitution model identified by IQTREE: subst_model = Q.yeast+G4 (In family.txt)
 - Commands run in command line from within GeneRax directory:
   ```
   conda activate generax-env
