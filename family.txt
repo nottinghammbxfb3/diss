@@ -1,0 +1,6 @@
+[FAMILIES]
+- el22
+starting_gene_tree = gr_data/gene_tree.newick
+alignment = gr_data/msa.fasta
+mapping = gr_data/map.link
+subst_model = Q.yeast+G4
