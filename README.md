@@ -171,3 +171,37 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Run IQTREE with ModelFinder Plus and 1000 bootstrap replicates: [run_iqtree.sh](run_iqtree.sh)
 - Model selected by ModelFinder Plus: Q.yeast+G4
 - IQTREE output file, including model selection and consensus tree: [iqtree_out.iqtree](iqtree_out.iqtree)
+
+## 3. Gene tree reconciliation
+### A. Installation
+- GeneRax version 2.1.3
+- Dependancies:
+  - gcc_linux-64 version 9.3.0
+  - gxx_linux-64 version 9.3.0
+  - cmake version 3.18.4
+  - openmpi version 4.0.5
+  - Command ran to create conda environment with dependancies:
+    ```
+    conda create -n generax-env gcc_linux-64=9.3.0 gxx_linux-64=9.3.0 cmake=3.18.4 openmpi=4.0.5 -c conda-forge
+    ```
+### B. Input files
+- Names of proteins and species were changed to run in GeneRax.
+- Python dictionary to convert NCBI codes to species and gene names: [convert_protein_names.py](convert_protein_names.py)
+- MSA in fasta format: [msa.fasta](msa.fasta)
+- Species tree: [species.newick](species.newick)
+- Gene tree: [gene_tree.newick](gene_tree.newick)
+- Mapping file: [map.link](map.link)
+- Family file: [family.txt](family.txt)
+### C. Running GeneRax
+- All input files stored in directory within GeneRax directory (created by GeneRax install) called gr_data.
+- Settings:
+  - To account for duplications and losses: --rec-model UndatedDL
+  - To evaluate the likelihood, the duplication and loss rates, and the reconciliation of the starting gene tree: --strategy EVAL
+- Commands run in command line from within GeneRax directory:
+  ```
+  conda activate generax-env
+  ```
+  ```
+  build/bin/generax --families gr_data/family.txt --species-tree gr_data/species.newick --rec-model UndatedDL --prefix generax_out --strategy EVAL
+  ```
+
