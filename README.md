@@ -267,4 +267,10 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
     fix_omega = 1         * Estimate or fix omega (Fix omega)
         omega = 1        * Initial or fixed omega (Fixed omega)
   ```
+- Each gene had 2 directories, which contained the control file in one and the null control in the other.
+- Script to run Homo Sapiens eL22 control file : [run_paml.sh](run_paml.sh)
 
+### C. PAML results
+- For each gene's null and test result directory, log likelihood (lnL) scores were extracted from the ouptut file specified from within the control file.
+- Script to create file with lnL scores and associated gene name: [get_lnls.sh](get_lnls.sh)
+- Extracted lnL values: [lnl_values.txt](lnl_values.txt)
