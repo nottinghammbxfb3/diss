@@ -7,7 +7,7 @@
 ## 1. Dataset construction
 ### A. Genome download
 - NCBI Datasets version 16.13.0
-- NCBI Datasets accession sourced from NCBI Datasets genome website: https://www.ncbi.nlm.nih.gov/datasets/genome/
+- NCBI Datasets accession sourced from NCBI Datasets genome website: https://www.ncbi.nlm.nih.gov/datasets/genome/ (Accessed 5/6/2024)
 - Example command ran in command line to download a genome (Homo sapiens):
   ```
   datasets download genome accession GCF_000001405.40 --include gff3,rna,cds,protein,genome,seq-report
@@ -157,7 +157,7 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 ## 2. Phylogenetic reconstruction of eL22 family.
 ### A. Multiple sequence alignment (MSA)
 - MAFFT version 7.511
-- Using web tool: https://mafft.cbrc.jp/alignment/server/index.html 
+- Using web tool: https://mafft.cbrc.jp/alignment/server/index.html (Accessed 20/6/2024)
 - Strategy: Auto (which selected L-INS-I)
 - Alignment file: [aa_msa.aln](aa_msa.aln)
 
@@ -208,4 +208,11 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
   ```
   build/bin/generax --families gr_data/family.txt --species-tree gr_data/species.newick --rec-model UndatedDL --prefix generax_out --strategy EVAL
   ```
+## 4. Positive selection detection
+### A. Nucleotide alignment
+- Using protein NCBI codes from BLAST search: [protein_codes.txt](protein_codes.txt)
+- Extract nucleotide sequences from nucleotide genomes: [get_nt_seqs.py](get_nt_seqs.py)
+- Nucleotide MSA was perfomed with Translator X web tool, selecting MAFFT method and "geuss correct reading frame" to minimise stop codons: http://www.translatorx.co.uk/ (Accessed 1/7/2024)
+- Nucleotide MSA: [nt_msa.phy](nt_msa.phy)
+
 
