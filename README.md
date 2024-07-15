@@ -213,6 +213,58 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Using protein NCBI codes from BLAST search: [protein_codes.txt](protein_codes.txt)
 - Extract nucleotide sequences from nucleotide genomes: [get_nt_seqs.py](get_nt_seqs.py)
 - Nucleotide MSA was perfomed with Translator X web tool, selecting MAFFT method and "geuss correct reading frame" to minimise stop codons: http://www.translatorx.co.uk/ (Accessed 1/7/2024)
+- Names translated from NCBI codes to gene names using python dicitonary: [convert_protein_names.py](convert_protein_names.py)
 - Nucleotide MSA: [nt_msa.phy](nt_msa.phy)
+### B. Running PAML
+- PAML version 4.10.7
+- PAML was ran using CODEML, Branch-site Model With Heterogeneous ω (nonsynonymous/synonymous rate ratio) Across Branches and Sites.
+- Using the gene tree without branch lengths or bootstrap values: [clean_gene_tree.tree](clean_gene_tree.tree)
+- Each terminal branch was ran as the foreground branch, editing the gene tree for each run, by specifying the foreground branch with "#1" on the given foreground branch.
+- Example Homo Sapeins eL22 foreground branch gene tree: [hs.tree](hs.tree)
+- Each gene required a control file with varying ω, and a null control file with fixed ω.
+- For each run a new control and null control file was created, editing the gene tree path to be the given foreground branch gene tree.
+- Example control file for Homo Sapeins eL22: [control.ctl](control.ctl)
+  ```
+        seqfile = ../../nt_msa.phy            * Path to the alignment file
+     treefile = ../../branches/hs.tree           * Path to the tree file
+      outfile = outbranch_hs.txt            * Path to the output file
+   
+        noisy = 3              * How much rubbish on the screen
+      verbose = 1              * More or less detailed report
 
+      seqtype = 1              * Data type
+        ndata = 1           * Number of data sets or loci
+        icode = 0              * Genetic code 
+    cleandata = 0              * Remove sites with ambiguity data?
+		
+        model = 2         * Models for ω varying across lineages (Enable 2 or more ω for branches)
+	  NSsites = 2          * Models for ω varying across sites (Run under model M2a)
+    CodonFreq = 7        * Codon frequencies (Mutation selection model)
+	  estFreq = 0        * Use observed freqs or estimate freqs by ML (Use observed frequencies)
+        clock = 0          * Clock model (Assume no clock)
+    fix_omega = 0         * Estimate or fix omega (Estimate omega)
+        omega = 0.5        * Initial or fixed omega (Initial omega value)
+  ```
+- Example null control file for Homo Sapins eL22 (changing only fix_omega and omega): [null_control.ctl](null_control.ctl)
+  ```
+        seqfile = ../../nt_msa.phy            * Path to the alignment file
+     treefile = ../../branches/hs.tree           * Path to the tree file
+      outfile = outbranch_hs.txt            * Path to the output file
+   
+        noisy = 3              * How much rubbish on the screen
+      verbose = 1              * More or less detailed report
+
+      seqtype = 1              * Data type
+        ndata = 1           * Number of data sets or loci
+        icode = 0              * Genetic code 
+    cleandata = 0              * Remove sites with ambiguity data?
+		
+        model = 2         * Models for ω varying across lineages (Enable 2 or more ω for branches)
+	  NSsites = 2          * Models for ω varying across sites (Run under model M2a)
+    CodonFreq = 7        * Codon frequencies (Mutation selection model)
+	  estFreq = 0        * Use observed freqs or estimate freqs by ML (Use observed frequencies)
+        clock = 0          * Clock model (Assume no clock)
+    fix_omega = 1         * Estimate or fix omega (Fix omega)
+        omega = 1        * Initial or fixed omega (Fixed omega)
+  ```
 
