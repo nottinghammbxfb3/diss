@@ -75,7 +75,8 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 - Out of 74 proteins, 63 were unique and included in downstream analysis.
 - The pre-filtered amino acid sequences, with * indicating uniqueness and inclusion downstream: [all_hit_seqs.faa](all_hit_seqs.faa)
 
-__Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus. ([combined_blast_results.csv](combined_blast_results.csv))
+__Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus (Schizosaccharomyces osmophilus is "scz")
+ ([combined_blast_results.csv](combined_blast_results.csv))
 |Species|Query sequence|Database sequence|Percent identity|Alignment length|Number of mismatches|Number of gap openings|Start of alignment in query|End of alignment in query|Start of alignment in subject|End of alignment in subject|Expectation value     |Bit score|
 |-------|--------------|-----------------|----------------|----------------|--------------------|----------------------|---------------------------|-------------------------|-----------------------------|---------------------------|----------------------|---------|
 |scz    |NP_000974.1   |XP_056037923.1   |52.778          |108             |49                  |1                     |20                         |125                      |11                           |118                        |8.180000000000001e-37 |119.0    |
