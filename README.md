@@ -277,6 +277,7 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Extracted lnL values (Branches are named by acronym of species and gene if terminal branch. If internal branch named by upper and lower terminal branch. Null results names by n + test branch name, i.e. test = 'hs', null = 'nhs' : [lnl_values.txt](lnl_values.txt)
 - Significance is calulated by Chi-squared test with 1 degree of freedom.
 - Python script to extract significant lnL vlaues: [get_sig_diffs.py](get_sig_diffs.py)
+
 __Table S3.1 Significant lnL values.__ [sig_diffs.csv](sig_diffs.csv)
 
 |branch|test         |null         |diff              |p_value |*   |**   |
