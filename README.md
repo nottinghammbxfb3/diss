@@ -2,6 +2,7 @@
 ## Tools used throughout:
 - Python version 3.12.2
 - Pandas version 2.2.2
+- Scipy version 1.14.0
 - Conda version 24.3.0
 - Slurm version 23.02.6
 ## 1. Dataset construction
@@ -273,4 +274,6 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 ### C. PAML results
 - For each gene's null and test result directory, log likelihood (lnL) scores were extracted from the ouptut file specified from within the control file.
 - Script to create file with lnL scores and associated gene name: [get_lnls.sh](get_lnls.sh)
-- Extracted lnL values: [lnl_values.txt](lnl_values.txt)
+- Extracted lnL values (Branches are named by acronym of species and gene if terminal branch. If internal branch named by upper and lower terminal branch. Null results names by n + test branch name, i.e. test = 'hs', null = 'nhs' : [lnl_values.txt](lnl_values.txt)
+- Significance is calulated by Chi-squared test with 1 degree of freedom.
+- Python script to extract significant lnL vlaues: [get_sig_diffs.py](get_sig_diffs.py)
