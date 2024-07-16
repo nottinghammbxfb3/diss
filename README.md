@@ -214,6 +214,8 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Using protein NCBI codes from BLAST search: [protein_codes.txt](protein_codes.txt)
 - Extract nucleotide sequences from nucleotide genomes: [get_nt_seqs.py](get_nt_seqs.py)
 - Nucleotide MSA was perfomed with Translator X web tool, selecting MAFFT method and "geuss correct reading frame" to minimise stop codons: http://www.translatorx.co.uk/ (Accessed 1/7/2024)
+- Names for downstream analysis were translated from NCBI codes to gene and species name, with the gene name as in the annotation file of the given genome, and species as genus.species For example "L22_D.melanogaster".
+- When there was multiple genes from the same species with the same name, the genes were numbered by ".x", where x is an arbitrary unique number. For example "L22-3-like.1_S.stentomum" and "L22-3-like.2_S.stentomum"
 - Names translated from NCBI codes to gene names using python dicitonary: [convert_protein_names.py](convert_protein_names.py)
 - Nucleotide MSA: [nt_msa.phy](nt_msa.phy)
 ### B. Running PAML
@@ -294,3 +296,8 @@ __Table S3.1 Significant lnL values.__ [sig_diffs.csv](sig_diffs.csv)
 |tr    |-15592.612792|-15596.884658|8.54373200000191  |0.003467|True|True |
 |ttcc  |-15600.131511|-15603.126474|5.989926000002015 |0.014388|True|False|
 |uv    |-15588.70765 |-15593.625377|9.835454000000027 |0.001712|True|True |
+
+- For these significant results, the omega values were obtained using the command:
+  ```
+  grep 'MLE' -A5 hs/outbranch_hs.txt
+  ```
