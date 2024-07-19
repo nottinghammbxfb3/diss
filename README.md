@@ -279,25 +279,26 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
 - Extracted lnL values (Branches are named by acronym of species and gene if terminal branch. If internal branch named by upper and lower terminal branch. Null results names by n + test branch name, i.e. test = 'hs', null = 'nhs' : [lnl_values.txt](lnl_values.txt)
 - Significance is calulated by Chi-squared test with 1 degree of freedom.
 - Python script to extract significant lnL vlaues: [get_sig_diffs.py](get_sig_diffs.py)
-
-__Table S3.1 Significant lnL values.__ [sig_diffs.csv](sig_diffs.csv)
-
-|branch|test         |null         |diff              |p_value |*   |**   |
-|------|-------------|-------------|------------------|--------|----|-----|
-|dd1   |-15594.454273|-15598.109498|7.310450000000856 |0.006855|True|True |
-|dm    |-15594.989169|-15597.2053  |4.432261999998445 |0.035266|True|False|
-|gm1   |-15596.128232|-15598.121282|3.9861000000018976|0.045877|True|False|
-|pp13  |-15590.512032|-15592.886359|4.748653999999078 |0.029321|True|False|
-|pp16  |-15596.869916|-15599.423377|5.106921999999031 |0.023831|True|False|
-|pp6   |-15596.880732|-15599.510616|5.2597679999998945|0.021824|True|False|
-|pt    |-15591.733875|-15593.946066|4.42438200000106  |0.035429|True|False|
-|sca   |-15595.695004|-15598.066453|4.742898000000423 |0.029419|True|False|
-|tcp   |-15589.161001|-15595.504119|12.686235999997734|0.000368|True|True |
-|tr    |-15592.612792|-15596.884658|8.54373200000191  |0.003467|True|True |
-|ttcc  |-15600.131511|-15603.126474|5.989926000002015 |0.014388|True|False|
-|uv    |-15588.70765 |-15593.625377|9.835454000000027 |0.001712|True|True |
-
-- For these significant results, the omega values were obtained using the command:
+- Significant lnL values: [sig_diffs.csv](sig_diffs.csv)
+- For these significant results, the omega values and proportion of positive sites were obtained using the command:
   ```
   grep 'MLE' -A5 hs/outbranch_hs.txt
   ```
+__Table S3.1 Significant lnL values.__ [sig_diffs.csv](sig_diffs.csv)
+
+|branch|test         |null         |diff              |p value |Proportion positive sites (%)   |dN/dS   |
+|------|-------------|-------------|------------------|--------|----|-----|
+|dd1   |-15594.454273|-15598.109498|7.310450000000856 |0.006855 (**)|1.018|51.13449 |
+|dm    |-15594.989169|-15597.2053  |4.432261999998445 |0.035266 (*) |16.779|999.0000|
+|gm1   |-15596.128232|-15598.121282|3.9861000000018976|0.045877 (*)|1.094|28.02395|
+|pp1pp3  |-15590.512032|-15592.886359|4.748653999999078 |0.029321 (*)|0.835|5.20665|
+|pp1pp6  |-15596.869916|-15599.423377|5.106921999999031 |0.023831 (*)|1.429|59.01271|
+|pp6   |-15596.880732|-15599.510616|5.2597679999998945|0.021824 (*)|1.485|998.99884|
+|pt    |-15591.733875|-15593.946066|4.42438200000106  |0.035429 (*)|12.227|10.18445|
+|sca   |-15595.695004|-15598.066453|4.742898000000423 |0.029419 (*)|3.207|999.0000|
+|tcp   |-15589.161001|-15595.504119|12.686235999997734|0.000368 (**)|2.905|999.0000 |
+|tr    |-15592.612792|-15596.884658|8.54373200000191  |0.003467 (**)|4.854|999.0000 |
+|ttcc  |-15600.131511|-15603.126474|5.989926000002015 |0.014388 (*)|1.965 |8.35402|
+|uv    |-15588.70765 |-15593.625377|9.835454000000027 |0.001712 (**)|14.26|217.63390 |
+
+
