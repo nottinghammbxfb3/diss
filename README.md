@@ -301,4 +301,5 @@ __Table S3.1 Significant lnL values.__ [sig_diffs.csv](sig_diffs.csv)
 |ttcc  |-15600.131511|-15603.126474|5.989926000002015 |0.014388 (*)|1.965 |8.35402|
 |uv    |-15588.70765 |-15593.625377|9.835454000000027 |0.001712 (**)|14.26|217.63390 |
 
-
+- Python script to perform Benjamini-Hochberg procedure: [do_multiple_test.py](do_multiple_test.py)
+- Adjusted p-values: [adjusted_p_values.csv](adjusted_p_values.csv)
