@@ -20,7 +20,7 @@
 
 
 
-__Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession number.__ * indicates using a clade instead of kingdom. ([species.tsv](species.tsv))
+__Table S1.1. Taxonomy, Busco missing percentage and NCBI datasets accession number.__ * indicates using a clade instead of kingdom. ([species.tsv](species.tsv))
 |Genus|Species|Kingdom|Phylum|Class|Order|Family|Busco Missing (%)|NCBI Accession|
 |-|-|-|-|-|-|-|-|-|
 |Homo|sapiens|Animal|Chordata|Mammalia|Primates|Hominidae|0|GCF_000001405.40|
@@ -76,7 +76,7 @@ __Table S1.1 Taxonomy, Busco missing percentage and NCBI datasets accession numb
 - Out of 74 proteins, 63 were unique and included in downstream analysis.
 - The pre-filtered amino acid sequences, with * indicating uniqueness and inclusion downstream: [all_hit_seqs.faa](all_hit_seqs.faa)
 
-__Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of genus (Schizosaccharomyces osmophilus is "scz")
+__Table S1.2. BLASTp results.__ Species name is represented by first 3 letters of genus (Schizosaccharomyces osmophilus is "scz")
  ([combined_blast_results.csv](combined_blast_results.csv))
 |Species|Query sequence|Database sequence|Percent identity|Alignment length|Number of mismatches|Number of gap openings|Start of alignment in query|End of alignment in query|Start of alignment in subject|End of alignment in subject|Expectation value     |Bit score|
 |-------|--------------|-----------------|----------------|----------------|--------------------|----------------------|---------------------------|-------------------------|-----------------------------|---------------------------|----------------------|---------|
@@ -353,7 +353,7 @@ __Table S3. Given gene name and NCBI code for eL22 gene family.__ [ncbi_to_gene.
 - Python script to perform Benjamini-Hochberg procedure: [do_multiple_test.py](do_multiple_test.py)
 - Adjusted p-values: [adjusted_p_values.csv](adjusted_p_values.csv)
   
-__Table S4 Significant lnL values and Benjamini-Hochberg correction.__ [sig_diffs.csv](sig_diffs.csv)
+__Table S4. Significant lnL values and Benjamini-Hochberg correction.__ [sig_diffs.csv](sig_diffs.csv)
 
 |branch|test         |null         |difference             |p value |(I/m)Q|Significant|Proportion positive sites (%)   |dN/dS   |
 |------|-------------|-------------|------------------|--------|----|-----|----|------|
