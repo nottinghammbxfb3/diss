@@ -370,6 +370,7 @@ __Table S4. Significant lnL values and Benjamini-Hochberg correction.__ [sig_dif
 |ttcc  |-15600.131511|-15603.126474|5.989926000002015 |0.014388 (*)|0.001174|False|1.965 |8.35402|
 |uv    |-15588.70765 |-15593.625377|9.835454000000027 |0.001712 (**)|0.000469|False|14.26|217.63390 |
 
+
 ## 5. Structure prediction and visualisation
 - All protein visualisations made using PyMOL version: 2.5.8. Avaliable at: https://www.pymol.org/
 - eL22-like prediction made using AlphaFold colab with all default settings Avaliable at: https://colab.research.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb
