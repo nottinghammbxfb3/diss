@@ -1,4 +1,5 @@
-# Supplementary material
+# Evolution of eL22 and paralogs in eukaryotes.
+## Supplementary material
 ## Tools used throughout:
 - Python version 3.12.2
 - Pandas version 2.2.2
