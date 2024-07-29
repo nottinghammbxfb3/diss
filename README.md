@@ -189,7 +189,7 @@ __Table S1.2 BLASTp results.__ Species name is represented by first 3 letters of
     conda create -n generax-env gcc_linux-64=9.3.0 gxx_linux-64=9.3.0 cmake=3.18.4 openmpi=4.0.5 -c conda-forge
     ```
 ### B. Input files
-Table S3. Given gene name and NCBI code for eL22 gene family.
+__Table S3. Given gene name and NCBI code for eL22 gene family.__ [ncbi_to_gene.csv](ncbi_to_gene.csv)
 |NCBI code     |Given gene name                   |
 |--------------|----------------------------------|
 |NP_001078112.1|L22e-protein-family.1_A.thaliana  |
